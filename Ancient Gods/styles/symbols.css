@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Short Stack", cursive;
+}
+main {
+  margin: 40px;
+}
+main h1 {
+  text-align: center;
+}
+.info {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  line-height: 1.8;
+}
+
+.container {
+  margin: 2% 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 5px;
+}
+/* Assigning general property to card  */
+.card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 350px;
+}
+
+/*  Assigning properties to inner
+        content of card  */
+.card__inner {
+  background-color: rgba(0, 0, 0, 0.582);
+  color: #fff;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  opacity: 0;
+  padding: 5px 1.3rem 2rem 2rem;
+  transition: all 0.4s ease 0.2s;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+/*  On hovering card opacity
+        of content must be 1*/
+.card:hover .card__inner {
+  opacity: 1;
+}
+
+/*  General property for heading
+        and paragraph*/
+.card__inner h2 {
+  margin-top: 10px;
+  color: #cca525;
+}
+
+.card__inner p {
+  overflow-y: scroll;
+  height: 85%;
+  padding-right: 0.5rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+}
